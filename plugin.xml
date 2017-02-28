@@ -8,7 +8,7 @@
     id="cordova-plugin-adnaga-base"
     version="1.0.0">
 
-    <name>adnaga</name>
+    <name>adnaga-base</name>
     <description>adnaga base plugin</description>
     <license>MIT</license>
     <keywords>cordova,adnaga,ads,ad</keywords>
@@ -42,7 +42,6 @@
 
         <source-file src="src/android/Adnaga.java" target-dir="src/com/adnaga/"/>
         <source-file src="src/android/Intenthelper.java" target-dir="src/com/adnaga/"/>
-        <source-file src="build-extras.gradle" target-dir="."/>
     </platform>
 
 </plugin>
