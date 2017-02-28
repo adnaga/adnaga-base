@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest"
+    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+    id="cordova-plugin-adnaga-base"
+    version="1.0.0">
+
+    <name>adnaga</name>
+    <description>adnaga base plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,adnaga,ads,ad</keywords>
+    <repo>https://github.com/adnaga/adnaga-base</repo>
+    <issue>https://github.com/adnaga/adnaga-base/issues</issue>
+
+    <js-module src="www/adnaga.js" name="adnaga">
+        <clobbers target="adnaga" />
+    </js-module>
+
+    <js-module src="www/intenthelper.js" name="intenthelper">
+        <clobbers target="intenthelper" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Adnaga">
+                <param name="android-package" value="com.adnaga.Adnaga"/>
+            </feature>
+            <feature name="Intenthelper">
+                <param name="android-package" value="com.adnaga.Intenthelper"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+        </config-file>
+
+        <source-file src="src/android/Adnaga.java" target-dir="src/com/adnaga/"/>
+        <source-file src="src/android/Intenthelper.java" target-dir="src/com/adnaga/"/>
+        <source-file src="build-extras.gradle" target-dir="."/>
+    </platform>
+
+</plugin>

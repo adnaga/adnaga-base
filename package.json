@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-adnaga",
+  "version": "1.0.0",
+  "description": "show full screen ads in your cordova app",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnaga/adnaga-base.git"
+  },
+  "cordova": {
+    "id": "cordova-plugin-adnaga",
+    "platforms": [
+      "android"
+    ]
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adnaga/adnaga-base/issues"
+  },
+  "homepage": "https://github.com/adnaga/adnaga-base#readme"
+}
