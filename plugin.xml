@@ -42,6 +42,7 @@
 
         <source-file src="src/android/Adnaga.java" target-dir="src/com/adnaga/"/>
         <source-file src="src/android/Intenthelper.java" target-dir="src/com/adnaga/"/>
+        <source-file src="build-extras.gradle" target-dir="."/>
     </platform>
 
 </plugin>

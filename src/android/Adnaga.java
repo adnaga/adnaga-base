@@ -31,6 +31,7 @@ public class Adnaga extends CordovaPlugin {
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         if (action.equals("showAds")) {
             // return showAds(callbackContext, data);
+            return true;
         } else if (action.equals("init")) {
             // all ads event callback goes to this callback
             // _aduniteCallbackContext = callbackContext;
@@ -41,6 +42,7 @@ public class Adnaga extends CordovaPlugin {
             return true;
         } else if (action.equals("loadAds")) {
             // return loadAds(callbackContext, data);
+            return true;
         } else {
             return false;
         }
