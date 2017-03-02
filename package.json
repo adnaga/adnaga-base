@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-adnaga",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "show full screen ads in your cordova app",
   "scripts": {
   },

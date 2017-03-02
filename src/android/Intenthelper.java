@@ -14,7 +14,6 @@ import java.util.TimerTask;
 import java.util.Map;
 import android.util.Log;
 import android.util.DisplayMetrics;
-import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.telephony.TelephonyManager;
 import android.content.pm.PackageManager;

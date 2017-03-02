@@ -6,7 +6,7 @@
     xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest"
     xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
     id="cordova-plugin-adnaga-base"
-    version="1.0.0">
+    version="0.1.0">
 
     <name>adnaga-base</name>
     <description>adnaga base plugin</description>
@@ -42,7 +42,7 @@
 
         <source-file src="src/android/Adnaga.java" target-dir="src/com/adnaga/"/>
         <source-file src="src/android/Intenthelper.java" target-dir="src/com/adnaga/"/>
+        <source-file src="src/android/IPlugin.java" target-dir="src/com/adnaga/"/>
         <source-file src="build-extras.gradle" target-dir="."/>
     </platform>
-
 </plugin>
