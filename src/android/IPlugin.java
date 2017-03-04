@@ -7,4 +7,6 @@ public interface IPlugin {
     public void loadAds(String pid);
     public void showAds(final CallbackContext callbackContext);
     public String getNetworkName();
+    public void onPause();
+    public void onResume();
 }

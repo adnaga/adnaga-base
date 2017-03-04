@@ -152,6 +152,15 @@ module.exports = {
           for (var property in self._adsStates) {
             self._loadAds(property)
           }
+          // hookup the onPause and onResume
+          document.addEventListener('pause',
+            function () {
+              cordova.exec(function () { }, function () { }, 'Adnaga', 'onPause', [])
+            }, false)
+          document.addEventListener('resume',
+            function () {
+              cordova.exec(function () { }, function () { }, 'Adnaga', 'onResume', [])
+            }, false)
         }
       }, function (err) {
         log('[error] failed to call Adnaga.init', err)

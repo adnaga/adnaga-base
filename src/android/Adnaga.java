@@ -12,6 +12,7 @@ import android.util.Log;
 
 public class Adnaga extends CordovaPlugin {
     private static final String LOG_TAG = "Adnaga";
+    private static boolean _inited = false;
     private static CallbackContext _adnagaCallbackContext;
 
     private static Map<String, IPlugin> _pluginMap = new HashMap<String, IPlugin>();
@@ -24,6 +25,10 @@ public class Adnaga extends CordovaPlugin {
             return initAdnaga(callbackContext, data);
         } else if (action.equals("loadAds")) {
             return loadAds(callbackContext, data);
+        } else if (action.equals("onPause")) {
+            return onPause();
+        } else if (action.equals("onResume")) {
+            return onResume();
         }
         return false;
     }
@@ -78,10 +83,29 @@ public class Adnaga extends CordovaPlugin {
                 Log.e(LOG_TAG, String.format("Invalid tuple %s", tuple));
             }
         }
+        _inited = true;
 
         PluginResult result = new PluginResult(PluginResult.Status.OK, new JSONObject());
         result.setKeepCallback(true);
         _adnagaCallbackContext.sendPluginResult(result);
+        return true;
+    }
+
+    private boolean onPause() {
+        if (_inited) {
+            for (IPlugin plugin : _pluginMap.values()) {
+                plugin.onPause();
+            }
+        }
+        return true;
+    }
+
+    private boolean onResume() {
+        if (_inited) {
+            for (IPlugin plugin : _pluginMap.values()) {
+                plugin.onResume();
+            }
+        }
         return true;
     }
 
